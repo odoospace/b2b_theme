@@ -95,7 +95,7 @@
 
     <!-- shop product listing -->
     <template id="b2b_products" inherit_id="website_sale.products" name="Products">
-        <xpath expr="//div[@id='products_grid']/table" position="replace">
+        <xpath expr="//div[@id='products_grid']//table" position="replace">
                 <table width="100%">
                     <tbody>
                         <tr t-ignore="true">
