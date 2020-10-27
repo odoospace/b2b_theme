@@ -1,0 +1,58 @@
+html, body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+a {
+    color: grey;
+}
+
+.btn-secondary {
+    background-color: grey;
+    border-color: grey;
+}
+
+/*
+.dropdown-toggle :hover {
+    background-color: darkgrey;
+}
+*/
+
+.navbar-light {
+    background-color: #F6CF45 !important;
+    color: black;
+}
+
+.oe_product.oe_list {
+    margin-top: 8px;
+    min-height: 64px;
+    max-height: 100px !important;
+    padding-left: 8px;
+}
+
+.b2b_product img {
+    height: 60px !important;
+}
+
+.b2b_product.a{
+    color: black !important;
+}
+
+.page-item.active .page-link{z-index: 1; color: grey; background-color: #F6CF45; border-color: #F6CF45;}
+
+.page-item.disabled .page-link{color: #6c757d; pointer-events: none; cursor: auto; background-color: #FFFFFF; border-color: #dee2e6;}
+
+.page-link {
+    color: grey;
+}
+
+.page-link:hover{
+    color: grey;
+}
+
+.nav-item .active {
+    color: black !important;
+    background-color: #F6CF45 !important;
+}
+
