@@ -13,6 +13,10 @@ a {
     border-color: grey;
 }
 
+.img-fluid {
+    width: 60px !important;
+}
+
 /*
 .dropdown-toggle :hover {
     background-color: darkgrey;
