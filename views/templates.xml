@@ -152,12 +152,12 @@
                         </div>
                     </div>
                     <div class="col-4" id="b2b_product">
-                        <a itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name"/>
+                        <a class="b2b_name" itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name"/>
                         <!--
                         <a role="button" t-if="not show_publish and not product.website_published" t-att-href="product_href" class="btn btn-secondary btn-sm btn-danger" title="This product is unpublished.">Unpublished</a>
                         -->
                     </div>
-                    <div class="col" id="b2b_code_default">
+                    <div class="col-2" id="b2b_code_default">
                         <p class="b2b_product_code">
                             <a itemprop="default_code" t-att-href="product_href" t-att-content="product.default_code" t-field="product.default_code"/>
                         </p>
