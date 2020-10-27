@@ -95,7 +95,12 @@
 
     <!-- shop product listing -->
     <template id="b2b_products" inherit_id="website_sale.products" name="Products">
+        <!--
         <xpath expr="//div[@id='products_grid']//table" position="replace">
+        -->
+        
+        <xpath expr="//span" position="replace">
+        
                 <table width="100%">
                     <tbody>
                         <tr t-ignore="true">
@@ -161,8 +166,9 @@
                         <del style="white-space: nowrap; margin-right: 15px" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
                     </div>
                     <div class="col text-right" id="b2b_product_discount">
-                        <span>-</span>
-                        <span t-esc="combination_info['list_price'] and (int(round((100 / combination_info['list_price']) * (combination_info['list_price'] - combination_info['price'])))) or 0"/>
+                        <span class="badge badge-warning">
+                            -<span t-esc="combination_info['list_price'] and (int(round((100 / combination_info['list_price']) * (combination_info['list_price'] - combination_info['price'])))) or 0"/>%
+                        </span>
                     </div>
                     <div class="col text-right" id="b2b_product_subtotal">
                         <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price">
