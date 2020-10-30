@@ -140,7 +140,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-4" id="b2b_product">
+                    <div class="col-3" id="b2b_product">
                         <a class="b2b_name" itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name"/>
                         <!--
                         <a role="button" t-if="not show_publish and not product.website_published" t-att-href="product_href" class="btn btn-secondary btn-sm btn-danger" title="This product is unpublished.">Unpublished</a>
@@ -151,17 +151,17 @@
                             <a itemprop="default_code" t-att-href="product_href" t-att-content="product.default_code" t-field="product.default_code"/>
                         </p>
                     </div>
-                    <!--
-                    <div class="col text-right" id="b2b_product_price">
-                        <del style="white-space: nowrap; margin-right: 15px" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                    
+                    <div class="col-1 text-right b2b_price" id="b2b_product_price">
+                        <span t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
                     </div>
-                    -->
-                    <div class="col text-right" id="b2b_product_discount">
+                    
+                    <div class="col-1 text-right" id="b2b_product_discount">
                         <span class="badge badge-warning">
                             -<span t-esc="combination_info['list_price'] and (int(round((100 / combination_info['list_price']) * (combination_info['list_price'] - combination_info['price'])))) or 0"/>%
                         </span>
                     </div>
-                    <div class="col text-right" id="b2b_product_subtotal">
+                    <div class="col text-right b2b_price" id="b2b_product_subtotal">
                         <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price">
                             <b>
                                 <t t-if="True"><!-- compatibility 12.0 -->
@@ -181,16 +181,19 @@
                             <span class="badge badge-warning">pocas unid.</span>
                         </t>
                         <t t-if="product.qty_available &gt; 5.0">
-                            <span class="badge badge-success">sin stock</span>
+                            <span class="badge badge-success">con stock</span>
                         </t>
                     </div>
-                    <div class="col text-right" id="b2b_add_cart" >
+                    <div class="col text-left" id="b2b_add_cart" >
                         <t t-set="product_variant_id" t-value="product._get_first_possible_variant_id()"/>
                         <input name="product_id" t-att-value="product_variant_id" type="hidden"/>
+                        
+                        <input class="form-control b2b_qty" type="text" name="qty" t-att-value="qty"/> 
+                        
                         <t t-if="product_variant_id">
-                            <a href="#" role="button" class="btn btn-secondary btn-sm a-submit" aria-label="Shopping cart" title="Shopping cart">
+                            <button type="submit" role="button" class="btn btn-secondary btn-sm a-submit" aria-label="Shopping cart" title="Shopping cart">
                                 <span class="fa fa-shopping-cart"/>
-                            </a>
+                            </button>
                         </t>
                     </div>
                 </div>
