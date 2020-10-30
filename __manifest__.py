@@ -1,11 +1,11 @@
 {
     # Theme information
     'name': "B2B Theme",
-    'description': """
+    'description': """B2B Theme
     """,
     'category': 'Theme/Ecommerce',
-    'version': '12.0.1.6.0',
-    'depends': ['website','website_theme_install'],
+    'version': '12.0.1.7.0',
+    'depends': ['website_sale','website_theme_install', 'stock'],
 
     # templates
     'data': [
@@ -18,11 +18,11 @@
     ],
 
     # demo pages
-    'demo': [
-        'demo/pages.xml',
-    ],
+    #'demo': [
+    #    'demo/pages.xml',
+    #],
 
     # Your information
     'author': "Impulso Diagonal S.L.U.",
-    'website': "",
+    'website': "https://impulso.xyz",
 }
