@@ -69,38 +69,27 @@
 
     </template>
 
-    <!--
-    <template id="index">
-        <t t-call="website.layout">
-            <t t-set="title">New page</t>
-            <div class="oe_structure">
-                <div class="container">
-                    <h1>My first web page</h1>
-                    <p>Hello, world!</p>
-                </div>
-            </div>
-        </t>
-    </template>
-    -->
+    <template id="b2b_products_categories" inherit_id="website_sale.products_categories" name="B2B Products Category">
 
-    <!--
-    <template id="homepage_test" name="HomePage" inherit_id="website.homepage">
-       <xpath expr="//div[@id='wrap']" position="replace">
-        <div id="wrap" class="oe_structure">
-            <h1>Test Home Page</h1>
-        </div>
-       </xpath>
-   </template>
-   -->
+        <xpath expr="//div[@id='products_grid_before']" position="attributes">
+            <attribute name="class">col-2</attribute>
+        </xpath>
+
+        <xpath expr="//div[@id='products_grid']" position="attributes">
+            <attribute name="class">col-9</attribute>
+        </xpath>
+
+    </template>
 
     <!-- shop product listing -->
-    <template id="b2b_products" inherit_id="website_sale.products" name="Products">
-        
+    <template id="b2b_products" inherit_id="website_sale.products" name="B2B Products">
+
+        <xpath expr="//div[@class='container py-2 oe_website_sale']" position="attributes">
+            <attribute name="class">container-fluid py-2 oe_website_sale b2b_space</attribute>
+        </xpath>
+
         <xpath expr="//div[@id='products_grid']//table" position="replace">
         
-        <!--
-        <xpath expr="//span" position="replace">
-        -->
                 <table width="100%">
                     <tbody>
                         <tr t-ignore="true">
@@ -162,9 +151,11 @@
                             <a itemprop="default_code" t-att-href="product_href" t-att-content="product.default_code" t-field="product.default_code"/>
                         </p>
                     </div>
+                    <!--
                     <div class="col text-right" id="b2b_product_price">
                         <del style="white-space: nowrap; margin-right: 15px" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
                     </div>
+                    -->
                     <div class="col text-right" id="b2b_product_discount">
                         <span class="badge badge-warning">
                             -<span t-esc="combination_info['list_price'] and (int(round((100 / combination_info['list_price']) * (combination_info['list_price'] - combination_info['price'])))) or 0"/>%
