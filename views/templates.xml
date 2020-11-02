@@ -129,7 +129,7 @@
     
     <template name="Products item B2B" id = "products_item_b2b" inherit_id="website_sale.products_item">
     <xpath expr="//form" position="replace">
-        <form action="/shop/cart/update" method="post">
+        <form action="/shop/cart/update#" method="post">
             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
             <div class="container">
                 <div class="row">
@@ -164,7 +164,7 @@
                     <div class="col text-right b2b_price" id="b2b_product_subtotal">
                         <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price">
                             <b>
-                                <t t-if="True"><!-- compatibility 12.0 -->
+                                <t t-if="False"><!-- compatibility 12.0 -->
                                     <del t-attf-class="text-danger mr8 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
                                 </t>
                                 <span t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
@@ -188,16 +188,17 @@
                         <t t-set="product_variant_id" t-value="product._get_first_possible_variant_id()"/>
                         <input name="product_id" t-att-value="product_variant_id" type="hidden"/>
                         
-                        <input class="form-control b2b_qty" type="text" name="qty" t-att-value="qty"/> 
+                        <input class="form-control b2b_qty" type="text" name="add_qty" t-att-value="add_qty"/> 
                         
                         <t t-if="product_variant_id">
-                            <button type="submit" role="button" class="btn btn-secondary btn-sm a-submit" aria-label="Shopping cart" title="Shopping cart">
+                            <button type="button" role="button" class="add_to_cart_js js_check_product btn btn-secondary btn-sm" aria-label="Shopping cart" title="Shopping cart">
                                 <span class="fa fa-shopping-cart"/>
                             </button>
                         </t>
                     </div>
                 </div>
             </div>
+            <!--
             <div itemscope="itemscope" itemtype="http://schema.org/Product">
                 <div class="ribbon-wrapper">
                     <a href="#" role="button" class="ribbon btn btn-danger">Sale</a>
@@ -214,6 +215,7 @@
                 </t>
 
             </div>
+            -->
         </form>
      </xpath>
     </template>

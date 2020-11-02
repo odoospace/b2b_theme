@@ -3,9 +3,9 @@
     'name': "B2B Theme",
     'description': """B2B Theme
     """,
-    'category': 'Theme/Ecommerce',
-    'version': '12.0.1.8.0',
-    'depends': ['website_sale','website_theme_install', 'stock'],
+    'category': 'Theme',
+    'version': '12.0.2.0.0',
+    'depends': ['b2b_base'],
 
     # templates
     'data': [
