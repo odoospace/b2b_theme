@@ -13,7 +13,7 @@
         'views/pages.xml',
         'views/templates.xml',
         'views/assets.xml',
-        'views/website_sale.xml',
+        # 'views/website_sale.xml',
     #     'views/options.xml',
     #    'views/snippets.xml',
     ],
