@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-08 12:50+0000\n"
-"PO-Revision-Date: 2021-02-08 12:50+0000\n"
+"POT-Creation-Date: 2021-02-08 12:42+0000\n"
+"PO-Revision-Date: 2021-02-08 12:42+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,59 +20,45 @@ msgstr ""
 msgid "<i class=\"fa fa-shopping-cart\"/>\n"
 "                    My Cart"
 msgstr "<i class=\"fa fa-shopping-cart\"/>\n"
-"                    Mi Carrito"
+"                    O meu carrinho"
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.products_item_b2b
 msgid "<span class=\"badge badge-danger\">sin stock</span>"
-msgstr ""
+msgstr "<span class=\"badge badge-danger\">fora de stock</span>"
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.products_item_b2b
 msgid "<span class=\"badge badge-success\">con stock</span>"
-msgstr ""
+msgstr "<span class=\"badge badge-success\">em stock</span>"
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.products_item_b2b
 msgid "<span class=\"badge badge-warning\">pocas unid.</span>"
-msgstr ""
+msgstr "<span class=\"badge badge-warning\">poucas unid.</span>"
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.b2b_products
 msgid "Click <i>'New'</i> in the top-right corner to create your first product."
-msgstr "Clic a <i>'Nuevo'</i> en la esquina superior derecha para crear su primer producto."
+msgstr "Clique em <i>'New'</i> no canto superior direito para criar o seu primeiro produto."
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.replace_header
 msgid "Logout"
-msgstr "Cerrar sesión"
+msgstr "Terminar sessão"
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.b2b_products
 msgid "No product defined."
-msgstr "No se ha definido producto."
+msgstr "Nenhum produto definido"
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.b2b_products
 msgid "No results found for \""
-msgstr "No se encontraron resultados de \""
+msgstr "Não foram encontrados resultados para \""
 
 #. module: b2b_theme
 #: model_terms:ir.ui.view,arch_db:b2b_theme.products_item_b2b
 msgid "Shopping cart"
-msgstr "Carro de compras"
+msgstr "Carrinho"
 
-#. module: website_sale
-#: model_terms:ir.ui.view,arch_db:website_sale.cart
-#: model_terms:ir.ui.view,arch_db:website_sale_order.amount_total
-msgid ""
-"<span class=\"\">Process Checkout</span>\n"
-"                                        <span class=\"fa fa-chevron-right\"/>"
-msgstr ""
-"<span class=\"\">Realizar pedido</span>\n"
-"                                        <span class=\"fa fa-chevron-right\"/>"
-
-#. module: website_sale
-#: model_terms:ir.ui.view,arch_db:website_sale.short_cart_summary
-msgid "<span>Process Checkout</span>"
-msgstr "<span> Realizar pedido</span>"
