@@ -10,7 +10,7 @@
     # templates
     'data': [
     #    'views/layout.xml',
-        'views/pages.xml',
+        # 'views/pages.xml',
         'views/templates.xml',
         'views/assets.xml',
         # 'views/website_sale.xml',
