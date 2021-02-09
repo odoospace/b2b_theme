@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-08 12:42+0000\n"
-"PO-Revision-Date: 2021-02-08 12:42+0000\n"
+"POT-Creation-Date: 2021-02-09 15:36+0000\n"
+"PO-Revision-Date: 2021-02-09 15:36+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -62,3 +62,17 @@ msgstr "Não foram encontrados resultados para \""
 msgid "Shopping cart"
 msgstr "Carrinho"
 
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.cart
+#: model_terms:ir.ui.view,arch_db:website_sale_order.amount_total
+msgid ""
+"<span class=\"\">Process Checkout</span>\n"
+"                                        <span class=\"fa fa-chevron-right\"/>"
+msgstr ""
+"<span class=\"\">Checkout do processo</span>\n"
+"                                        <span class=\"fa fa-chevron-right\"/>"
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.short_cart_summary
+msgid "<span>Process Checkout</span>"
+msgstr "<span> Checkout do processo</span>"
