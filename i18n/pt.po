@@ -69,10 +69,10 @@ msgid ""
 "<span class=\"\">Process Checkout</span>\n"
 "                                        <span class=\"fa fa-chevron-right\"/>"
 msgstr ""
-"<span class=\"\">Checkout do processo</span>\n"
+"<span class=\"\">Ordem de encomenda</span>\n"
 "                                        <span class=\"fa fa-chevron-right\"/>"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.short_cart_summary
 msgid "<span>Process Checkout</span>"
-msgstr "<span> Checkout do processo</span>"
+msgstr "<span> Ordem de encomenda</span>"
