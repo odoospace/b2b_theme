@@ -219,11 +219,22 @@
     </template>
 
     <template name="Shopping cart lines b2b SKU" id = "cart_lines_b2b_sku" inherit_id="website_sale.cart_lines">
-        <xpath expr="//t[@t-call='website_sale.cart_line_product_link']" position="before">
-            <span t-field="line.product_id.product_tmpl_id.default_code" style="color:grey;font-size:8px"></span>
+        <xpath expr="//t[@t-call='website_sale.cart_line_product_link']" position="after">
+            <p>
+                 <t t-if="line.product_id.qty_available == 0">
+                    <span class="badge badge-danger">out of stock</span>
+                </t>
+                <t t-if="line.product_id.qty_available &gt;= 1.0 and line.product_id.qty_available &lt; 6.0">
+                    <span class="badge badge-warning">few units.</span>
+                </t>
+                <t t-if="line.product_id.qty_available &gt; 5.0">
+                    <span class="badge badge-success">with stock</span>
+                </t>
+                <span t-field="line.product_id.product_tmpl_id.default_code" style="margin-left:10px;color:grey;font-size:10px"/>
+            </p>
         </xpath>
     </template>
-    <template id="cart_lines_b2b_stock" inherit_id="website_sale.cart_lines" active="True" customize_show="True" name="Cart Lines Product Stock Semaphore">
+    <!-- <template id="cart_lines_b2b_stock" inherit_id="website_sale.cart_lines" active="True" customize_show="True" name="Cart Lines Product Stock Semaphore">
         <xpath expr="//span[@t-field='line.price_reduce_taxinc']" position="after">
             <div class="col" id="b2b_cart_line_product_stock" >
                 <t t-if="line.product_id.qty_available == 0">
@@ -237,7 +248,7 @@
                 </t>
             </div>
         </xpath>
-    </template>
+    </template> -->
     <template id="search_b2b_theme" inherit_id="website_sale.search" name="Search Box b2b theme">
         <xpath expr="//form" position="attributes">
             <attribute name="style">margin-left:20%;width:40%</attribute>
@@ -251,7 +262,7 @@
            <attribute name="t-att-style">'font-weight:bold;' if categ.child_id or not categ.parent_id else 'font-weight:normal;'</attribute>
         </xpath>
     </template>
-     <template id="products_categories_b2b" inherit_id="website_sale.products_categories" name="eCommerce Categories B2B">
+    <template id="products_categories_b2b" inherit_id="website_sale.products_categories" name="eCommerce Categories B2B">
         <xpath expr="//ul[@class='nav nav-pills flex-column mt16']" position="before">
             <strong><br></br><br></br>Categories</strong>
         </xpath>
