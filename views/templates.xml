@@ -248,7 +248,7 @@
             <attribute name="t-attf-class">fa #{'fa-chevron-down' if categ.id in parent_category_ids else 'fa-chevron-right'}</attribute>
         </xpath>
         <xpath expr="//a" position="attributes">
-           <attribute name="t-att-style">'font-weight:bold;' if categ.child_id else 'font-weight:normal;'</attribute>
+           <attribute name="t-att-style">'font-weight:bold;' if categ.child_id or not categ.parent_id else 'font-weight:normal;'</attribute>
         </xpath>
     </template>
     
