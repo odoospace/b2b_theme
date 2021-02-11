@@ -267,5 +267,16 @@
             <strong><br></br><br></br>Categories</strong>
         </xpath>
     </template>
+    <template id="cart_lines_b2b_stock" inherit_id="website_sale.cart_lines" name="Shopping Cart Lines">
+        <xpath expr="//input[@type='text'][hasclass('quantity')]" position="attributes">
+          <attribute name='t-att-data-max'></attribute>
+        </xpath>
+        <!-- <xpath expr="//t[@t-if='line._get_stock_warning(clear=False)']" position="replace">
+        </xpath>
+        <xpath expr="//t[@t-else='1']" position="replace">
+        </xpath>
+        <xpath expr="//t[@t-if='website_sale_order']" position="replace">
+        </xpath> -->
+    </template>
 
 </odoo>
