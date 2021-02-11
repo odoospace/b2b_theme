@@ -251,6 +251,10 @@
            <attribute name="t-att-style">'font-weight:bold;' if categ.child_id or not categ.parent_id else 'font-weight:normal;'</attribute>
         </xpath>
     </template>
-    
+     <template id="products_categories_b2b" inherit_id="website_sale.products_categories" name="eCommerce Categories B2B">
+        <xpath expr="//ul[@class='nav nav-pills flex-column mt16']" position="before">
+            <strong><br></br><br></br>Categories</strong>
+        </xpath>
+    </template>
 
 </odoo>
