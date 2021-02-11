@@ -87,9 +87,8 @@
         <xpath expr="//div[@class='container py-2 oe_website_sale']" position="attributes">
             <attribute name="class">container-fluid py-2 oe_website_sale b2b_space</attribute>
         </xpath>
-
-        <xpath expr="//div[@id='products_grid']//table" position="replace">
-        
+        <!-- This inheritance it's incompatible with list view and product grid so it's disabled -->
+        <!-- <xpath expr="//div[@id='products_grid']//table" position="replace">
                 <table width="100%">
                     <tbody>
                         <tr t-ignore="true">
@@ -122,8 +121,7 @@
                         <p groups="sales_team.group_sale_manager">Click <i>'New'</i> in the top-right corner to create your first product.</p>
                     </div>
                 </t>
-
-        </xpath>
+        </xpath> -->
     </template>
 
     
