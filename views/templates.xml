@@ -278,5 +278,13 @@
         <xpath expr="//t[@t-if='website_sale_order']" position="replace">
         </xpath> -->
     </template>
+    <template id="cart_lines_available_b2b_stock" inherit_id="website_sale_stock_available_display.cart_lines" name="Disable stock Shopping Cart Lines">
+        <xpath expr="//t[@t-call='website_sale_stock_available_display.stock_info']" position="replace">
+        </xpath>
+    </template>
+    <template id="cart_sumary_available_b2b_stock" inherit_id="website_sale_stock_available_display.cart_summary" name="Cart right column disable stock">
+        <xpath expr="//t[@t-call='website_sale_stock_available_display.stock_info']" position="replace">
+        </xpath>
+    </template>
 
 </odoo>
