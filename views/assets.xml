@@ -2,7 +2,7 @@
     <template id="mystyle" name="Tailwindcss" inherit_id="website.assets_frontend">
         <xpath expr="link[last()]" position="after">
             <link rel="stylesheet" type="text/css" href="b2b_theme/static/src/css/style.css"/>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700"/> 
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700"/>
             <script type="text/javascript" src="/b2b_theme/static/src/js/main.js"/>
         </xpath>
